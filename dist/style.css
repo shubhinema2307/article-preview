@@ -1,0 +1,259 @@
+/* common css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Manrope', sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* basic css */
+* {
+    box-sizing: border-box;
+  }
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+	max-width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sec-article {
+    padding: 260px 0;
+    background-color: #ECF2F8;
+    height: 100vh;
+}
+
+.row-article {
+    background-color: #ffffff;
+}
+
+.col-right-txt {
+    padding: 30px 40px;
+    min-height: 100%;
+    position: relative;
+}
+
+.article-heading h2{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    color:  #48556A;
+}
+
+.article-para p{
+    font-size: 13px;
+    color: #6E8098;
+    line-height: 20px;
+}
+
+.row-article-author {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: inherit;
+    align-items: center;
+}
+
+.col-author {
+    text-align: left;
+    width: 80%;
+}
+
+.col-share {
+    position: relative;
+    width: 40%;
+    text-align: right;
+}
+
+.row-author-name-img{
+    align-items: center;
+}
+.col-author-img {
+    width: 20%;
+}
+.col-author-name {
+    text-align: left;
+    width: 80%;
+    padding-left: 20px;
+}
+
+.col-author-img img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.col-author-name h4 {
+    font-size: 13px;
+    color: #48556A;
+    line-height: 30px;
+}
+.col-author-name p{
+    font-size: 13px;
+    color: #9DAEC2;
+}
+
+
+.col-share .share-icon{
+    background-color: #6E8098;
+    color: #ffffff;
+    padding: 10px 13px;
+    border-radius: 50px;
+}
+
+.display-share-none{
+    display: none !important;
+}
+
+.display-share-block{
+    display: block;
+}
+
+.share-btn-div {
+    background-color: #48556A;
+    color: #9DAEC2;
+    font-size: 13px;
+    padding: 0 15px;
+    position: absolute;
+    top: -85px;
+    right: -85px;
+    box-shadow: 0 10px 10px rgba(201, 213, 225, 50%);
+    border-radius: 5px;
+    /* text-align: right; */
+}
+
+.share-btn-div ul{
+    list-style: none;
+}
+
+.share-btn-div ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.share-btn-div::before {
+    content: '';
+    position: absolute;
+    top: 42px;
+    left: 45%;
+    height: 0;
+    border-top: solid 15px #48556A;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent
+}
+
+
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+
+    .sec-article {
+        padding: 70px 0;
+        height: auto;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .row {
+        width: 100%;
+        display: block;
+    }
+
+    .article-heading h2{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .article-para p{
+        margin-bottom: 90px;
+    }
+
+    .row-article-author, .col-author .row-author-name-img {
+        display: flex;
+    }
+
+    .col-share .share-icon{
+        padding: 3px 6px;
+    }
+
+    .share-btn-div-mob {
+        background-color: #48556A;
+        color: #9DAEC2;
+        font-size: 13px;
+        padding: 0 15px;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0 10px 10px rgba(201, 213, 225, 50%);
+        border-radius: 0px 0px 5px 5px;
+        /* text-align: right; */
+    }
+    .share-btn-div-mob ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .share-btn-div-mob ul li {
+        display: inline-block;
+        padding: 10px;
+        
+    }
+    .share-btn-div-mob .share-icon-mob {
+        color: #48556A;
+        background-color: #ffffff;
+        border-radius: 23px;
+        padding: 3px 5px;
+
+        
+    }
+  }
