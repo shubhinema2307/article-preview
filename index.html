@@ -28,12 +28,16 @@
         <img src="images/drawers.jpg" alt="" srcset="">
       </div>
       <div class="col-right-txt">
-        <div class="article-heading">
-          <h2>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+        <div class="row">
+          <div class="article-heading">
+            <h2>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+          </div>
         </div>
-        <div class="article-para">
-          <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. 
-            I’ve got some simple tips to help you make any room feel complete.</p>
+        <div class="row">
+          <div class="article-para">
+            <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. 
+              I’ve got some simple tips to help you make any room feel complete.</p>
+          </div>
         </div>
         <div class="row row-article-author">
           <div class="col-author">
@@ -50,34 +54,36 @@
 
           </div>
           <div class="col-share">
-            <div class="share-btn-div ">
-              <ul>
-                <li>SHARE</li>
-                <li><a href="#"><img src="images/icon-facebook.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/icon-twitter.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/icon-pinterest.svg" alt=""></a></li>
-              </ul>
-            </div>
             <a href="#" class="share-icon" id="share-icon"><i class="fas fa-share"></i></a>
           </div>
         </div>
+        <div class="row">
+          <div class="share-btn-div ">
+            <ul>
+              <li>SHARE</li>
+              <li><a href="#"><img src="images/icon-facebook.svg" alt=""></a></li>
+              <li><a href="#"><img src="images/icon-twitter.svg" alt=""></a></li>
+              <li><a href="#"><img src="images/icon-pinterest.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- <div class="row row-share-btn-mob row-share-btn-mob-invisible">
+          <div class="share-btn-div-mob ">
+            <ul>
+              <li>SHARE</li>
+              <li><a href="#"><img src="images/icon-facebook.svg" alt=""></a></li>
+              <li><a href="#"><img src="images/icon-twitter.svg" alt=""></a></li>
+              <li><a href="#"><img src="images/icon-pinterest.svg" alt=""></a></li>
+              <li><a href="#" class="share-icon-mob" id="share-icon-mob"><i class="fas fa-share"></i></a></li>
+            </ul>
+          </div>
+        </div> -->
         
       </div>
     </div>
     
 
-
-  <div class="row row-share-btn-mob">
-    <div class="share-btn-div-mob ">
-      <ul>
-        <li>SHARE</li>
-        <li><a href="#"><img src="images/icon-facebook.svg" alt=""></a></li>
-        <li><a href="#"><img src="images/icon-twitter.svg" alt=""></a></li>
-        <li><a href="#"><img src="images/icon-pinterest.svg" alt=""></a></li>
-        <li><a href="#" class="share-icon-mob" id="share-icon-mob"><i class="fas fa-share"></i></a></li>
-      </ul>
-    </div>
-  </div>
 </div>
 </div>
 </body>
@@ -89,26 +95,41 @@
 
 
 <script type="text/javascript">
-$('.share-btn-div').hide();
-$('.row-share-btn-mob').hide();
+// $('.share-btn-div').hide();
+// $('.row-share-btn-mob').hide();
 
-  $('#share-icon').click(function() {
+//   $('#share-icon').click(function() {
+//     e.preventDefault();
+//     if ($(window).width() < 600){
+//       $('.row-article-author').hide();
+//       //$('.row-share-btn-mob').removeClass('display-share-none');
+//       $('.row-share-btn-mob').show();
+//     }
 
-    if ($(window).width() < 600){
-      $('.row-article-author').hide();
-      //$('.row-share-btn-mob').removeClass('display-share-none');
-      $('.row-share-btn-mob').show();
-    }
+//     $('.share-btn-div').toggle();
 
-    $('.share-btn-div').toggle();
+//     return false;
      
-  });
+//   });
 
-$('#share-icon-mob').click(function(){
-    $('.row-article-author').show();
-    $('.row-share-btn-mob').hide();
-    $('.share-btn-div').hide();
+// $('#share-icon-mob').click(function(){
+//     $('.row-article-author').show();
+//     $('.row-share-btn-mob').hide();
+//     $('.share-btn-div').hide();
 
+// });
+
+
+$('.share-btn-div').hide();
+
+$('#share-icon').click(function(e) {
+    e.preventDefault();
+    $('.share-btn-div').toggle();
+
+   $('.col-right-txt').addClass('mobile-share-div')
+
+
+    return false;
 });
 
 

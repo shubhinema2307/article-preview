@@ -74,21 +74,28 @@ img {
 
 .row-article {
     background-color: #ffffff;
-}
-
-.col-right-txt {
-    padding: 30px 40px;
-    min-height: 100%;
     position: relative;
 }
 
+.col-right-txt {
+    min-height: 100%;
+    position: relative;
+    
+}
+.article-heading {
+    padding: 0px 40px;
+    margin: 20px 0;
+}
 .article-heading h2{
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 15px;
     color:  #48556A;
 }
-
+.article-para {
+    padding: 0px 40px;
+    margin: 20px 0;
+}
 .article-para p{
     font-size: 13px;
     color: #6E8098;
@@ -99,8 +106,9 @@ img {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: inherit;
     align-items: center;
+    padding: 0px 40px;
+    margin: 20px 0;
 }
 
 .col-author {
@@ -163,8 +171,8 @@ img {
     font-size: 13px;
     padding: 0 15px;
     position: absolute;
-    top: -85px;
-    right: -85px;
+    top: 200px;
+    right: -40px;
     box-shadow: 0 10px 10px rgba(201, 213, 225, 50%);
     border-radius: 5px;
     /* text-align: right; */
@@ -190,6 +198,9 @@ img {
     border-right: solid 20px transparent
 }
 
+.row-share-btn-mob-invisible {
+    visibility: hidden;
+}
 
 
   /* Extra small devices (phones, 600px and down) */
@@ -208,18 +219,27 @@ img {
         width: 100%;
         display: block;
     }
+    
 
     .article-heading h2{
         font-size: 16px;
         margin-bottom: 15px;
     }
 
-    .article-para p{
-        margin-bottom: 90px;
+    
+    .col-right-txt {
+        min-height: 100%;
+        position: unset;
+        
     }
-
     .row-article-author, .col-author .row-author-name-img {
         display: flex;
+        
+    }
+    .row-article-author {
+        position: unset;
+        padding: 20px 40px;
+        margin: 20px 0;
     }
 
     .col-share .share-icon{
@@ -256,4 +276,33 @@ img {
 
         
     }
+
+    .mobile-share-div .share-btn-div {
+        background-color: #48556A;
+        color: #9DAEC2;
+        font-size: 13px;
+        padding: 12px 20px;
+        position: unset;
+        bottom: 0;
+        right: 0px;
+        box-shadow: 0 10px 10px rgb(201 213 225 / 50%);
+        border-radius: 5px;
+        /* text-align: right; */
+        width: 100%;
+    }
+    
+    .mobile-share-div .share-btn-div::before {
+        content: unset;
+    }
+
+    .mobile-share-div .share-icon {
+        z-index: 999999;
+        position: relative;
+    }
+
+    .mobile-share-div .row-article-author {
+        visibility: hidden;
+        padding: 0;
+    }
+    
   }
